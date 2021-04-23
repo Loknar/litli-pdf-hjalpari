@@ -13,7 +13,7 @@ Python skripta sem notar [Tesseract OCR](https://github.com/tesseract-ocr/tesser
 
 [Python (3.6.8 eða nýrra) og pip pakkastjórnunartólið](https://www.python.org/downloads/) og python pakkar sem tilgreindir eru í `requirements.txt`:
 
-```zsh
+```bash
 pip install -Ur requirements.txt
 ```
 
@@ -21,7 +21,7 @@ pip install -Ur requirements.txt
 
 ### Arch
 
-```zsh
+```bash
 sudo pacman -Syu
 sudo pacman -S tesseract tesseract-data-eng tesseract-data-isl
 ```
@@ -30,7 +30,7 @@ Ath: Við sækjum ensku og íslensku fyrir tesseract hér fyrir ofan, til að sj
 
 ### Debian/Ubuntu
 
-```zsh
+```bash
 sudo apt update
 sudo apt install tesseract-ocr libtesseract-dev tesseract-ocr-eng tesseract-ocr-isl
 ```
@@ -41,7 +41,7 @@ Ath: Við sækjum ensku og íslensku fyrir tesseract hér fyrir ofan, til að sj
 
 [Homebrew?](https://formulae.brew.sh/formula/tesseract)
 
-```zsh
+```bash
 brew update
 brew install tesseract --with-all-languages
 ```
@@ -58,8 +58,43 @@ Hægt er að sjá hvaða tungumál hafa verið sett upp fyrir tesseract með að
 
 Opna skipanalínu, vera í viðeigandi möppu og keyra:
 
-```zsh
+```bash
 python litli_pdf_hjalpari.py -h
+```
+
+```bash
+usage: litli-pdf-hjalpari [-h] -i INPUT_FILE -o OUTPUT_FILE [-ow] [-del] [-lang LANGUAGE] [-cph]
+                          [-cphr] [-rc] [-rcc] [-flip] [-ln LOGGER_NAME] [-ldir LOG_DIRECTORY]
+                          [-r ROLE]
+
+Litli PDF Hjálpari
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_FILE, --input-file INPUT_FILE
+                        Input PDF file.
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        Output PDF file.
+  -ow, --overwrite      Overwrite output file if exists.
+  -del, --delete-page-files
+                        Delete individual page files which are generated when textifying PDF files.
+  -lang LANGUAGE, --language LANGUAGE
+                        Language code for Tesseract to use.
+  -cph, --cut-pages-horizontally
+                        Separate each page horizontally into two pages, top half first.
+  -cphr, --cut-pages-horizontally-reverse
+                        Separate each page horizontally into two pages, bottom half first.
+  -rc, --rotate-clockwise
+                        Rotate each page clockwise.
+  -rcc, --rotate-counter-clockwise
+                        Rotate each page counterclockwise.
+  -flip, --rotate-flip  Rotate each page 180 degrees.
+  -ln LOGGER_NAME, --logger-name LOGGER_NAME
+                        Define logger name (Default: "hjalpari").
+  -ldir LOG_DIRECTORY, --log-directory LOG_DIRECTORY
+                        Directory to write logs in. Default: "./logs/".
+  -r ROLE, --role ROLE  Define runner role. (Default: "cli")
+                        Available options: "cli", "api", "cron", "hook".
 ```
 
 ## Nota sem CLI tól, hvar sem er
@@ -68,7 +103,7 @@ Viljirðu frekar geta skrifað til dæmis `litli-pdf-hjalpari` hvar sem er í st
 
 ### Linux/UNIX (bash)
 
-```zsh
+```bash
 ln -s /path/to/litli-pdf-hjalpari/bin/litli-pdf-hjalpari ~/.local/bin/litli-pdf-hjalpari
 ```
 
@@ -82,7 +117,7 @@ todo: skrifa bat skrá í stíl við bash skrána?
 
 ## Nokkur einföld skipanadæmi
 
-```zsh
+```bash
 # bara skrá inn skrá út bing bang bæng
 litli_pdf_hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
 # yfirskrifa output skrá sem er nú þegar til
