@@ -1,7 +1,7 @@
 
 # litli-pdf-hjalpari
 
-![Litli PDF Hjálpari](/img/litli-pdf-hjalpari.png?raw=true "Litli PDF Hjálpari")
+![Litli PDF Hjálpari](/pic-litli-pdf-hjalpari.png?raw=true "Litli PDF Hjálpari")
 
 > "Ég er með þessar pdf skrár sem virkar ekki að leita að texta í, gætirðu litið á þær fyrir mig Litli PDF Hjálpari?"
 
