@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Usage:
+# litli-pdf-hjalpari -h
+
+export LITLI_HJALPARI_CURRENT_DIR=$(pwd)
+export PYTHONDONTWRITEBYTECODE=1
+
+cd "$(dirname "$(realpath "$0")")/.."
+
+python litli-pdf-hjalpari.py "$@"

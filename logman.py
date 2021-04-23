@@ -155,7 +155,7 @@ class ColoredFormatter(logging.Formatter):
             self.level_styles = {
                 'debug': {'color': 'lightgreen'},
                 'info': {'color': 'white'},
-                'warning': {'color': 'yellow'},
+                'warning': {'color': 'lightyellow'},
                 'error': {'color': 'red'},
                 'critical': {'color': 'red', 'bold': True}
             }

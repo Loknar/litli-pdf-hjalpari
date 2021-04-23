@@ -1,5 +1,5 @@
-colorama==0.4.3; platform_system == 'Windows'
+colorama==0.4.4; platform_system == 'Windows'
 pdf2image==1.14.0
-Pillow==5.4.1
+Pillow==8.2.0
 PyPDF2==1.26.0
 pytesseract==0.3.7

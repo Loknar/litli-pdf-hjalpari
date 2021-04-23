@@ -17,28 +17,63 @@ Python skripta sem notar [Tesseract OCR](https://github.com/tesseract-ocr/tesser
 pip install -Ur requirements.txt
 ```
 
-## Tesseract CLI
+## Tesseract skipanalínutólið (CLI)
 
 ### Arch
 
 ```zsh
 sudo pacman -Syu
-sudo pacman -S tesseract
+sudo pacman -S tesseract tesseract-data-eng tesseract-data-isl
 ```
+
+Ath: Við sækjum ensku og íslensku fyrir tesseract hér fyrir ofan, til að sjá fleiri tungumál í boði sem tilbúnir pakkar er hægt að keyra t.d. `pacman -Ss tesseract`.
 
 ### Debian/Ubuntu
 
 ```zsh
 sudo apt update
-sudo apt install tesseract-ocr libtesseract-dev
+sudo apt install tesseract-ocr libtesseract-dev tesseract-ocr-eng tesseract-ocr-isl
+```
+
+Ath: Við sækjum ensku og íslensku fyrir tesseract hér fyrir ofan, til að sjá fleiri tungumál í boði sem tilbúnir pakkar er hægt að keyra t.d. `apt-cache search tesseract | grep language`.
+
+### MacOS
+
+[Homebrew?](https://formulae.brew.sh/formula/tesseract)
+
+```zsh
+brew update
+brew install tesseract --with-all-languages
 ```
 
 ### Windows
 
-[Find, download and execute some EXE file?](https://medium.com/quantrium-tech/installing-and-using-tesseract-4-on-windows-10-4f7930313f82)
+[Finna, sækja og keyra EXE uppsetningarskrá?](https://medium.com/quantrium-tech/installing-and-using-tesseract-4-on-windows-10-4f7930313f82) Eflaust er líka hægt að smíða tesseract frá kóða .. hef ekki sett mig inn í hvernig það er gert. Veit ekki um pakkatól fyrir windows sem býður upp á að sækja og setja upp tesseract, endilega sendu mér línu kæri lesandi ef þú veist um eitthvað slíkt. Þarf líklega að [bæta tesseract í PATH](https://medium.com/@kevinmarkvi/how-to-add-executables-to-your-path-in-windows-5ffa4ce61a53) að uppsetningu lokinni.
+
+Ath: Ef þú sækir og keyrir einhverja EXE uppsetningarskrá gæti þig langað að velja einhver auka tungumál til að hafa með í tesseract uppsetningunni.
+
+Hægt er að sjá hvaða tungumál hafa verið sett upp fyrir tesseract með að keyra `tesseract --list-langs`.
 
 # Notkun
 
+Opna skipanalínu, vera í viðeigandi möppu og keyra:
+
 ```zsh
 python litli_pdf_hjalpari.py -h
+```
+
+Viljirðu frekar geta skrifað til dæmis `litli-pdf-hjalpari` hvar sem er í stað þess að þurfa að vera í réttri möppu og keyra `python litli-pdf-hjalpari.py` geturðu einfaldlega bætt viðeigandi symlink í einhverja af bin/PATH möppunum þínum, til dæmis:
+
+## Linux/UNIX (bash)
+
+```zsh
+ln -s /path/to/litli-pdf-hjalpari/bin/litli-pdf-hjalpari ~/.local/bin/litli-pdf-hjalpari
+```
+
+Ath: Breyta `/path/to/` í slóð að repo möppunni `litli-pdf-hjalpari`.
+
+## Windows (powershell)
+
+```powershell
+dir
 ```
