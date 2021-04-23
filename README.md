@@ -84,11 +84,11 @@ todo: skrifa bat skrá í stíl við bash skrána?
 
 ```zsh
 # bara skrá inn skrá út bing bang bæng
-python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
+litli_pdf_hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
 # yfirskrifa output skrá sem er nú þegar til
-python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf" -ow
+litli_pdf_hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf" -ow
 # skrá þar sem síður snúa ekki rétt, snúa síðunum 90° réttsælis
-python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -rc -o "Documents/scanned_text_searchable.pdf"
+litli_pdf_hjalpari -i "Downloads/scanned.pdf" -rc -o "Documents/scanned_text_searchable.pdf"
 # skönnuð skrá með tveimur síðum á hverri síðu, aðskilja í sér síður og snúa síðunum 90° rangsælis
-python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -cph -rcc -o "Documents/scanned_text_searchable.pdf"
+litli_pdf_hjalpari -i "Downloads/scanned.pdf" -cph -rcc -o "Documents/scanned_text_searchable.pdf"
 ```
