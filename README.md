@@ -62,9 +62,11 @@ Opna skipanalínu, vera í viðeigandi möppu og keyra:
 python litli_pdf_hjalpari.py -h
 ```
 
+## Nota sem CLI tól, hvar sem er
+
 Viljirðu frekar geta skrifað til dæmis `litli-pdf-hjalpari` hvar sem er í stað þess að þurfa að vera í réttri möppu og keyra `python litli-pdf-hjalpari.py` geturðu einfaldlega bætt viðeigandi symlink í einhverja af bin/PATH möppunum þínum, til dæmis:
 
-## Linux/UNIX (bash)
+### Linux/UNIX (bash)
 
 ```zsh
 ln -s /path/to/litli-pdf-hjalpari/bin/litli-pdf-hjalpari ~/.local/bin/litli-pdf-hjalpari
@@ -72,8 +74,21 @@ ln -s /path/to/litli-pdf-hjalpari/bin/litli-pdf-hjalpari ~/.local/bin/litli-pdf-
 
 Ath: Breyta `/path/to/` í slóð að repo möppunni `litli-pdf-hjalpari`.
 
-## Windows (powershell)
+### Windows (powershell)
 
 ```powershell
-dir
+todo: skrifa bat skrá í stíl við bash skrána?
+```
+
+## Nokkur einföld skipanadæmi
+
+```zsh
+# bara skrá inn skrá út bing bang bæng
+python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
+# yfirskrifa output skrá sem er nú þegar til
+python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf" -ow
+# skrá þar sem síður snúa ekki rétt, snúa síðunum 90° réttsælis
+python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -rc -o "Documents/scanned_text_searchable.pdf"
+# skönnuð skrá með tveimur síðum á hverri síðu, aðskilja í sér síður og snúa síðunum 90° rangsælis
+python litli_pdf_hjalpari.py -i "Downloads/scanned.pdf" -cph -rcc -o "Documents/scanned_text_searchable.pdf"
 ```
