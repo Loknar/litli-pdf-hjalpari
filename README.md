@@ -59,7 +59,7 @@ Hægt er að sjá hvaða tungumál hafa verið sett upp fyrir tesseract með að
 Opna skipanalínu, vera í viðeigandi möppu og keyra:
 
 ```bash
-python litli_pdf_hjalpari.py -h
+python litli-pdf-hjalpari.py -h
 ```
 
 ```bash
@@ -119,11 +119,11 @@ todo: skrifa bat skrá í stíl við bash skrána?
 
 ```bash
 # bara skrá inn skrá út bing bang bæng
-litli_pdf_hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
+litli-pdf-hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf"
 # yfirskrifa output skrá sem er nú þegar til
-litli_pdf_hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf" -ow
+litli-pdf-hjalpari -i "Downloads/scanned.pdf" -o "Documents/scanned_text_searchable.pdf" -ow
 # skrá þar sem síður snúa ekki rétt, snúa síðunum 90° réttsælis
-litli_pdf_hjalpari -i "Downloads/scanned.pdf" -rc -o "Documents/scanned_text_searchable.pdf"
+litli-pdf-hjalpari -i "Downloads/scanned.pdf" -rc -o "Documents/scanned_text_searchable.pdf"
 # skönnuð skrá með tveimur síðum á hverri síðu, aðskilja í sér síður og snúa síðunum 90° rangsælis
-litli_pdf_hjalpari -i "Downloads/scanned.pdf" -cph -rcc -o "Documents/scanned_text_searchable.pdf"
+litli-pdf-hjalpari -i "Downloads/scanned.pdf" -cph -rcc -o "Documents/scanned_text_searchable.pdf"
 ```
